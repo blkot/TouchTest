@@ -212,6 +212,8 @@ public class TouchCameraControl : MonoBehaviour
 
         if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
         {
+            ///here is why ended may not be detected.
+            ///the touch gone, then the state check is no longer accessable.
             ///counter for onefingerfunc;
             functionExecution1++;
 
