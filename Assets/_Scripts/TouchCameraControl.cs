@@ -432,8 +432,8 @@ public class TouchCameraControl : MonoBehaviour
         GUI.Label(new Rect(50, 120, 400, 30), "Manipulation Phase :" + mState, guistyle);
         GUI.Label(new Rect(50, 160, 400, 30), "LastTouchFunction :" + lastTouch, guistyle);
 
-        GUI.Label(new Rect(50, 600, 400, 30), "FixedUpdateCount :" + fixedupdateCount, guistyle);
-        GUI.Label(new Rect(50, 600, 400, 30), "UpdateCount :" + updateCount, guistyle);
+        GUI.Label(new Rect(50, 720, 400, 30), "FixedUpdateCount :" + fixedupdateCount, guistyle);
+        GUI.Label(new Rect(50, 680, 400, 30), "UpdateCount :" + updateCount, guistyle);
 
         GUI.Label(new Rect(50, 600, 400, 30), "OneFingerExecutions :" + functionExecution1, guistyle);
         GUI.Label(new Rect(50, 640, 400, 30), "TwoFingerExecutions :" + functionExecution2, guistyle);
