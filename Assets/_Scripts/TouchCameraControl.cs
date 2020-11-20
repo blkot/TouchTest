@@ -101,7 +101,8 @@ public class TouchCameraControl : MonoBehaviour
     private int functionExecution1 = 0;
     private int functionExecution2 = 0;
 
-
+    private int updateCount;
+    private int fixedupdateCount;
 
     #endregion
 
@@ -137,6 +138,7 @@ public class TouchCameraControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        fixedupdateCount++;
         //Debug.Log(time_pass);
         //if (!EventSystem.current.IsPointerOverGameObject())
 
@@ -197,7 +199,10 @@ public class TouchCameraControl : MonoBehaviour
 
 
 
-
+    private void Update()
+    {
+        updateCount++;
+    }
 
 
 
@@ -426,6 +431,9 @@ public class TouchCameraControl : MonoBehaviour
         GUI.Label(new Rect(50, 80, 400, 30), "Time-Pass :" + time_pass, guistyle);
         GUI.Label(new Rect(50, 120, 400, 30), "Manipulation Phase :" + mState, guistyle);
         GUI.Label(new Rect(50, 160, 400, 30), "LastTouchFunction :" + lastTouch, guistyle);
+
+        GUI.Label(new Rect(50, 600, 400, 30), "FixedUpdateCount :" + fixedupdateCount, guistyle);
+        GUI.Label(new Rect(50, 600, 400, 30), "UpdateCount :" + updateCount, guistyle);
 
         GUI.Label(new Rect(50, 600, 400, 30), "OneFingerExecutions :" + functionExecution1, guistyle);
         GUI.Label(new Rect(50, 640, 400, 30), "TwoFingerExecutions :" + functionExecution2, guistyle);
